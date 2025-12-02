@@ -77,9 +77,9 @@ resource "azurerm_mssql_server" "mssql" {
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
 }
 
-resource "azurem_mssql_virtual_network_rule" "vnetrule" {
+resource "azurerm_mssql_virtual_network_rule" "vnetrule" {
   name      = "sql-vnet-rule"
-  server_id = azurerm_mssql_server.sql.id
+  server_id = azurerm_mssql_server.mssql.id
   subnet_id = azurerm_subnet.subnet.id
 
 }
